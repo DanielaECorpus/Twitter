@@ -1,103 +1,75 @@
-<body class="bg-light">
-  <div class="container-fluid">
-    <div class="heatherImg">
-      <img src="..." alt="header" id="headerImg">
-      <input type="file" name="pic" accept="image/*">
+<div class=" row backgroundColor headerWidth">
+</div>
+<div class="row">
+    <div class="col-md-4 alignRight">
+        Lists
     </div>
-  </div>
-  <br>
-  <br>
-  <div class="container">
+    <div class="col-md-1">
+        Moments
+    </div>
+    <div class="col-md-5 invisible">
+        dd
+    </div>
+    <button type="button" class="col-md-1 btn btn-primary">
+        Edit Profile
+    </button>
+</div>
+<div class="row">
+    <div class="col-md-4 alignRight">
+        0
+    </div>
+    <div class="col-md-1">
+        0
+    </div>
+</div>
+<div class="container-fluid colorDeFondo">
     <div class="row">
-      <div class="col-md-6 f2">
-        <div class="row justify-content-center">          
-          <div class="container UP">
-              <img class="rounded-circle bor" src="http://via.placeholder.com/200x200" alt="imgPerfil" width="200" height="200">
-              <div class="card-body">
-              <a href="#" class="btn btn-primary boton1" type="input">Cambiar Imagen</a>
-              </div>
-            </div>
-          </div>
-
-      </div>
-      <div class="col-md-6 order-md-1 ">
-        <h2 class="mb-3">Perfil de Usuario</h2>
-        <form class="needs-validation" novalidate>
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <input type="text" class="form-control" id="nombre" placeholder="Nombre" value="" required>
-              <div class="invalid-feedback">
-                Valid first name is required.
-              </div>
-            </div>
-            <div class="col-md-6 mb-3">
-              <input type="text" class="form-control" id="bio" placeholder="Bio" value="" required>
-              <div class="invalid-feedback">
-                Valid first name is required.
-              </div>
-            </div>
-          </div>
-          <div class="mb-3">
-            <input type="url" class="form-control" id="firstName" placeholder="Website" value="" required>
-            <div class="invalid-feedback">
-              Valid first name is required.
-            </div>
-          </div>
-          <div class="mb-3">
-            <fieldset disabled>
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">@</span>
+        <div class="col-3">
+            Diego Falcón
+        </div>
+        <div class="col-md-7">
+            <h2>Send Your First Tweet</h2>
+            <div class="row">
+                <div class="col-md-12 mb-3">We've got your first Tweet ready to go. 
+                    The hashtag #myfirstTweet will help others find and chat with you.
+                    <div class="row">
+                            <div class="col-12 my-3 p-3 bg-white rounded box-shadow">
+                                    <div class="col-md-10 mb-3 media text-muted pt-3">
+                                      <img data-src="holder.js/32x32?theme=thumb&bg=e83e8c&fg=e83e8c&size=1" alt="" class="mr-2 rounded">
+                                      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                                        <strong class="d-block text-gray-dark">@username</strong>
+                                        Just setting of my twitter #myfirstTweet
+                                      </p>
+                                      <button class="col-md-2 btn btn-primary">Tweet</button>
+                                    </div>
+                                    <div class="col-md-10 mb-3 media text-muted pt-3">
+                                      <img data-src="holder.js/32x32?theme=thumb&bg=6f42c1&fg=6f42c1&size=1" alt="" class="mr-2 rounded">
+                                      <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                                        <strong class="d-block text-gray-dark">@username</strong>
+                                        Hello Twitter! #myfirstTweet
+                                      </p>
+                                      <button class="col-md-2 btn btn-primary">Tweet</button>
+                                    </div>
+                            </div>
+                            <div>Or write your own</div>
+                            <div class="container colorFondoTextBox">
+                                <div class="row col-md-12">
+                                    <div class="row col-md-12">
+                                        <div class="input-group mb-3 textBox">
+                                        <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <input type="checkbox" aria-label="Checkbox for following text input">
+                                        </div>
+                                        </div>
+                                        <input type="text" class="form-control" aria-label="Text input with checkbox">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
                 </div>
-                <input type="text" class="form-control" id="username disabled" placeholder="Username" required>
-                <div class="invalid-feedback" style="width: 100%;">
-                  Your username is required.
-                </div>
-              </div>
-            </fieldset>
-          </div>
-
-          <div class="mb-3">
-            <fieldset disabled>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com">
-              <div class="invalid-feedback">
-                Please enter a valid email address for shipping updates.
-              </div>
-            </fieldset>
-          </div>
-          <div class="mb-3">
-            <input type="text" class="form-control" id="firstName" placeholder="Ciudad" value="" required>
-            <div class="invalid-feedback">
-              Valid first name is required.
             </div>
-          </div>
-          <div class="mb-3">
-            <input type="date" class="form-control" id="firstName" placeholder="Fecha de Nacimiento" value="" required>
-            <div class="invalid-feedback">
-              Valid first name is required.
-            </div>
-          </div>
+        </div>
 
-
-          <hr class="mb-4">
-          <button class="btn btn-primary btn-lg btn-block boton1" type="submit">Guardar</button>
-        </form>
-      </div>
     </div>
-    
-    <footer class="my-5 pt-5 text-muted text-center text-small">
-      <p class="mb-1">&copy; Twitter / Digital HUB / Equipo 3</p>
-      <ul class="list-inline">
-        <li class="list-inline-item">
-          <a href="#" class="fA">Privacy</a>
-        </li>
-        <li class="list-inline-item">
-          <a href="#" class="fA">Terms</a>
-        </li>
-        <li class="list-inline-item">
-          <a href="#" class="fA">Support</a>
-        </li>
-      </ul>
-    </footer>
-  </div>
-</body>
+</div>
