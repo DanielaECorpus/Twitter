@@ -27,3 +27,65 @@
     justify-content: center;
     position: relative;
 }
+
+.EdgeButton, .EdgeButton:visited {
+    border-radius: 100px;
+    box-shadow: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.EdgeButton--secondary {
+    background-color: #fff;
+    border: 1px solid #1da1f2;
+    color: #1da1f2;
+}
+
+.EdgeButton--small {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 4px 12px;
+}
+
+.StaticLoggedOutHomePage-communicationBlock {
+    background: #1da1f2;
+    overflow: hidden;
+    position: relative;
+}
+
+.cssA{
+    margin-right: 5px;
+}
+.py-3 {
+    /* padding-bottom: 1rem!important; */
+}
+
+.cssD{
+    padding: 155px;
+    color: white;
+    /* text-align: center; */
+    font-size: 1em;
+    font-family: fantasy;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+.cssDCon{
+    width: 60%;
+    margin-top: 70px;
+}
+
+.cssIconT{
+    color: blue;
+    width: 70px;
+    height: 50px;
+    margin-bottom: 20px;
+}
