@@ -18,11 +18,12 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { Routes,RouterModule} from '@angular/router';
 
 const appRoutes:Routes=[
-  {path:'',component:DashboardLoginPComponent},
+  {path:'', component: FeedComponent},
   {path:'dashboard-login-p',component:DashboardLoginPComponent},
   {path:'dashboard-registro',component:DashboardRegistroComponent},
-  {path:'usuario',component:UsuarioComponent}
-]
+  {path:'usuario',component:UsuarioComponent},
+  {path:'feed', component: FeedComponent}
+];
 
 @NgModule({
   declarations: [
