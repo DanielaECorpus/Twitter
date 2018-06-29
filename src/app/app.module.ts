@@ -4,9 +4,13 @@ import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
+
+import { PerfilComponent } from './perfil/perfil.component';
+
 import { DashboardLoginPComponent } from './dashboard-login-p/dashboard-login-p.component';
 import { DashboardRegistroComponent } from './dashboard-registro/dashboard-registro.component';
 import { UsuarioComponent } from './usuario/usuario.component';
+
 import { Routes,RouterModule} from '@angular/router';
 
 const appRoutes:Routes=[
@@ -19,12 +23,10 @@ const appRoutes:Routes=[
 @NgModule({
   declarations: [
     AppComponent,
-
+    PerfilComponent,
     DashboardLoginPComponent,
     DashboardRegistroComponent,
-
     UsuarioComponent
-
   ],
   imports: [
     BrowserModule,
