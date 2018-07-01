@@ -26,6 +26,8 @@ export class DashboardLoginPComponent implements OnInit {
   pass:string;
 //para guardar el id que se crea cuando se registra el usuario
 registerUId:any;
+//navbar
+nav:any;
 
   constructor(
     public authenticationService:AuthenticationService,
@@ -34,7 +36,16 @@ registerUId:any;
     public router:Router,
     //modal
     private modalService: NgbModal
-  ) { }
+  ) { 
+
+    ///para ocultar el navbar del login
+    const pagina = window.location.href;
+   console.log(pagina);
+   if ( pagina === 'http://localhost:4200/'||pagina === 'http://localhost:4200/dashboard-login-p' ) {
+    this.nav = document.getElementById('nav');
+    this.nav.style.display = 'none';
+   }
+  }
 
   //modal
   openLg(content) {
@@ -76,6 +87,7 @@ register(){
         pass:this.contra,
         avatar:this.avatar,
         userName:this.username
+        //userName:'@'+this.username
       } ;
       //enviamos el objeto al metodo que esta en el servicio
       const promise1= this.userFirebaseService.createUser(user);
