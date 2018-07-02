@@ -23,4 +23,14 @@
 }
 .u-borderRadiusInherit {
     border-radius: inherit!important;
+    border: 10px;
+}
+.leySeca {
+    color: blue;
+    font-size: 12px;
+
+}
+.bgColor {
+    background-color: white;
+    margin: 2px;
 }
