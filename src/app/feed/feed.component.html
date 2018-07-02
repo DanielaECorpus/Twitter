@@ -63,7 +63,23 @@
                   </span>
                 </div>
                 <div class="col align-self-end ">
-                  <button>Tweet</button>
+                        <button (click) = uploadFile()>Tweet</button>
+                  <span>
+                    <input type="file" (change)="fileChangeEvent($event)" />
+
+                    <image-cropper
+                        [imageChangedEvent]="imageChangedEvent"
+                        [maintainAspectRatio]="true"
+                        [aspectRatio]="4 / 3"
+                        [resizeToWidth]="128"
+                        format="png"
+                        (imageCropped)="imageCropped($event)"
+                        (imageLoaded)="imageLoaded()"
+                        (loadImageFailed)="loadImageFailed()"
+                    ></image-cropper>
+                    
+                    <img [src]="croppedImage" />
+                  </span>
                 </div>
               </div>
             </div>

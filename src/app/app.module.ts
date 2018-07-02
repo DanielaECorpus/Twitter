@@ -18,6 +18,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
 import { PerfilComponent } from './perfil/perfil.component';
 import { Routes,RouterModule} from '@angular/router';
+import { ImageCropperModule } from 'ngx-image-cropper';
 
 const appRoutes:Routes=[
   {path:'', component: DashboardLoginPComponent},
@@ -47,7 +48,8 @@ const appRoutes:Routes=[
     FormsModule,
     RouterModule.forRoot(appRoutes),
     //para el modal
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    ImageCropperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
