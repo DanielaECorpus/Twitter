@@ -4,7 +4,6 @@ import { UsersService } from '../users.service';
 import { Router } from '@angular/router';
 //modal
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
-import { LocaleDataIndex } from '@angular/common/src/i18n/locale_data';
 
 
 @Component({
@@ -19,7 +18,7 @@ export class DashboardLoginPComponent implements OnInit {
   apellido: string;
   correoR: string;
   contra: string;
-  avatar: string;
+  //avatar:string;
   username: string;
 
   //variables login
@@ -38,8 +37,6 @@ export class DashboardLoginPComponent implements OnInit {
     //modal
     private modalService: NgbModal
   ) {
-
-
   }
 
   //modal
@@ -80,7 +77,7 @@ export class DashboardLoginPComponent implements OnInit {
         apellido: this.apellido,
         correo: this.correoR,
         pass: this.contra,
-        avatar: this.avatar,
+        //avatar:this.avatar,
         userName: this.username
         //userName:'@'+this.username
       };

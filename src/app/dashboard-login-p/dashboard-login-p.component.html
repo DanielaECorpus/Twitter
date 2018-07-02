@@ -1,74 +1,73 @@
 <div class=" row" style="width:100%;height: 560px">
-    <div class="col-md-6 cssD StaticLoggedOutHomePage-communicationBlock align-items-center">
-      <p>
-        <i class="fas fa-search" style="margin-right: 10px;"></i>Sigue lo que te interesa</p>
-      <p>
-        <i class="far fa-user" style="margin-right: 10px;"></i>Entérate de lo que está hablando la gente</p>
-      <p>
-        <i class="far fa-comment" style="margin-right: 10px;"></i>Únete a la conversación</p>
-    </div>
-    <div class="col-md-6 ">
-   
-      <div class="form-row align-items-center" style="margin-left: 40px;">
-        <div class="col-sm-3 my-1">
-          <input [(ngModel)]="correo" type="text" class="form-control" style="width: 180px;" id="inlineFormInputName" placeholder="Correo electrónico">
-        </div>
-        <div class="col-sm-3 my-1">
-          <div class="input-group" style="margin-left: 20px;">
-            <input [(ngModel)]="pass" type="password" class="form-control" id="inlineFormInputGroupUsername" placeholder="Contraseña"
-              style="margin-top: 18px;">
-            <small class="smallGris">¿Olvidaste tu contraseña</small>
-          </div>
-   
-        </div>
-        <div class="col-auto my-1" style="margin-left: 20px;">
-          <button (click)="login()" Type="submit" class="EdgeButton EdgeButton--secondary EdgeButton--small">Iniciar sesión</button>
-        </div>
+  <div class="col-md-6 cssD StaticLoggedOutHomePage-communicationBlock align-items-center">
+    <p>
+      <i class="fas fa-search" style="margin-right: 10px;"></i>Sigue lo que te interesa</p>
+    <p>
+      <i class="far fa-user" style="margin-right: 10px;"></i>Entérate de lo que está hablando la gente</p>
+    <p>
+      <i class="far fa-comment" style="margin-right: 10px;"></i>Únete a la conversación</p>
+  </div>
+  <div class="col-md-6 ">
+
+    <div class="form-row align-items-center" style="margin-left: 40px;">
+      <div class="col-sm-3 my-1">
+        <input [(ngModel)]="correo" type="text" class="form-control" style="width: 180px;" id="inlineFormInputName" placeholder="Correo electrónico">
       </div>
-      <div class="container cssDCon">
-        <i class="fab fa-twitter cssIconT" style="margin-left: 150px; justify-content:center;"></i>
-        <h5 style="text-align: center">Mira lo que está pasando en el mundo en este momento</h5>
-        <br>
-        <br>
-        <p style="text-align: center">Únete a Twitter hoy mismo</p>
-        <br>
-        <div class="col-auto my-1">
-          <button class="btn-lg btn-block EdgeButton EdgeButton--secondary EdgeButton--small" (click)="openLg(content)">Registrate</button>
+      <div class="col-sm-3 my-1">
+        <div class="input-group" style="margin-left: 20px;">
+          <input [(ngModel)]="pass" type="password" class="form-control" id="inlineFormInputGroupUsername" placeholder="Contraseña"
+            style="margin-top: 18px;">
+          <small class="smallGris">¿Olvidaste tu contraseña</small>
         </div>
+
+      </div>
+      <div class="col-auto my-1" style="margin-left: 20px;">
+        <button (click)="login()" Type="submit" class="EdgeButton EdgeButton--secondary EdgeButton--small">Iniciar sesión</button>
       </div>
     </div>
-   </div>
-   
-   <ng-template #content let-c="close" let-d="dismiss">
-    <div class="modal-header">
-      <h4 class="modal-title">Crea tu cuenta</h4>
-      <button type="button" class="close x" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-   
-      <div class="container" style="width: 500px;">
-        <div class="form-group">
-          <input [(ngModel)]="nombre" type="text" class="form-control inputTam" aria-describedby="emailHelp" placeholder="Nombre">
-        </div>
-        <div class="form-group">
-          <input [(ngModel)]="apellido" type="text" class="form-control inputTam" aria-describedby="emailHelp" placeholder="Apellido">
-        </div>
-        <div class="form-group">
-          <input [(ngModel)]="correoR" type="email" class="form-control inputTam" aria-describedby="emailHelp" placeholder="Correo">
-        </div>
-        <div class="form-group">
-          <input [(ngModel)]="contra" type="password" class="form-control inputTam" placeholder="Contraseña">
-        </div>
-        <div class="form-group">
-          <input [(ngModel)]="username" type="text" class="form-control inputTam" aria-describedby="emailHelp" placeholder="Usuario">
-        </div>
+    <div class="container cssDCon">
+      <i class="fab fa-twitter cssIconT" style="margin-left: 150px; justify-content:center;"></i>
+      <h5 style="text-align: center">Mira lo que está pasando en el mundo en este momento</h5>
+      <br>
+      <br>
+      <p style="text-align: center">Únete a Twitter hoy mismo</p>
+      <br>
+      <div class="col-auto my-1">
+        <button class="btn-lg btn-block EdgeButton EdgeButton--secondary EdgeButton--small" (click)="openLg(content)">Registrate</button>
       </div>
     </div>
-    <div class="modal-footer" style="align-self: center">
-      <button (click)="register()" type="button" class="EdgeButton--3">Register</button>
+  </div>
+</div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Crea tu cuenta</h4>
+    <button type="button" class="close x" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+    <div class="container" style="width: 500px;">
+      <div class="form-group">
+        <input [(ngModel)]="nombre" type="text" class="form-control inputTam" aria-describedby="emailHelp" placeholder="Nombre">
+      </div>
+      <div class="form-group">
+        <input [(ngModel)]="apellido" type="text" class="form-control inputTam" aria-describedby="emailHelp" placeholder="Apellido">
+      </div>
+      <div class="form-group">
+        <input [(ngModel)]="correoR" type="email" class="form-control inputTam" aria-describedby="emailHelp" placeholder="Correo">
+      </div>
+      <div class="form-group">
+        <input [(ngModel)]="contra" type="password" class="form-control inputTam" placeholder="Contraseña">
+      </div>
+      <div class="form-group">
+        <input [(ngModel)]="username" type="text" class="form-control inputTam" aria-describedby="emailHelp" placeholder="Usuario">
+      </div>
     </div>
-   
-    
-   </ng-template>
+  </div>
+  <div class="modal-footer" style="align-self: center">
+    <button (click)="register()" type="button" class="EdgeButton--3">REGISTRATE</button>
+  </div>
+
+</ng-template>

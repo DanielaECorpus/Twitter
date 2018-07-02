@@ -19,6 +19,7 @@ import { environment } from '../environments/environment';
 import { PerfilComponent } from './perfil/perfil.component';
 import { Routes,RouterModule} from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
+import { FooterComponent } from './footer/footer.component';
 
 const appRoutes:Routes=[
   {path:'', component: DashboardLoginPComponent},
@@ -37,7 +38,8 @@ const appRoutes:Routes=[
     DashboardLoginPComponent,
    // DashboardRegistroComponent,
     UsuarioComponent,
-   MenuComponent
+   MenuComponent,
+   FooterComponent
   ],
   imports: [
     BrowserModule,

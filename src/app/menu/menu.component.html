@@ -5,33 +5,47 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" routerLink="/">Home
-                    <span class="sr-only">(current)</span>
-                </a>
-            </li>
-            <li>
-                <a class="nav-link">Moments</a>
-            </li>
-            <li>
-                <a class="nav-link">Notifications</a>
-            </li>
-            <li>
-                <a class="nav-link">Messages</a>
-            </li>
+        <div>
+            <ul class="navbar-nav mr-auto">
 
-            <li class="nav-item">
-                <a class="nav-link " routerLink="/">Aqui va el icono twt</a>
-            </li>
-            <li>
-                <a class="nav-link">imagen de perfil</a>
-            </li>
-            <li (click)="logOut()">Cerrar Sesion</li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+                <li class="nav-item listNav">
+                    <a class="nav-link" routerLink="/feed">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item listNav">
+                    <a class="nav-link">
+                        <i class="fas fa-bolt"></i> Moments
+                    </a>
+                </li>
+                <li class="nav-item listNav">
+                    <a class="nav-link">
+                        <i class="fas fa-bell"></i> Notifications
+                    </a>
+                </li>
+                <li class="nav-item listNav">
+                    <a class="nav-link">
+                        <i class="fas fa-envelope"></i> Messages
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="twitterIcon">
+            <a class="nav-link" routerLink="/">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+        <div class="espacio1">
+            <input class="form-control searchBar" type="search" placeholder="Search Twitter" aria-label="Search">
+        </div>
+        <div class="espacio2 boton2">
+            <button class="boton2" (click)="logOut()">
+                <i class="fas fa-user-lock"></i>
+            </button>
+        </div>
+        <div class="espacio3 twitterIcon">
+            <button class="btn btn-primary my-2 my-sm-0 boton1" type="submit">Tweet</button>
+        </div>
+
     </div>
 </nav>
