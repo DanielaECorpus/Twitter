@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireStorage } from 'angularfire2/storage';
 import { TweetService } from '../tweet.service';
 import { AuthenticationService } from '../authentication.service';
+import { UsersService } from '../users.service';
 
 @Component({
   selector: 'app-feed',
@@ -24,12 +25,18 @@ tweet_id=Date.now();
 userlog:any;
 uidUserLog:any;
 
+objetoUsuarioL:any;
+
+nombre:any;
+username:any;
+
 
 
   constructor(
     private storage: AngularFireStorage,
     public tweetService:TweetService,
-    public authenticationService:AuthenticationService
+    public authenticationService:AuthenticationService,
+    public userFirebaseService:UsersService
   ) {
 
     const pagina = window.location.href;
@@ -45,6 +52,16 @@ uidUserLog:any;
       console.log(this.userlog);
       console.log(this.userlog.uid);
       this.uidUserLog=this.userlog.uid;
+
+      const stream2=this.userFirebaseService.getUserByUId(this.uidUserLog);
+      stream2.valueChanges().subscribe((result)=>{
+        //para obtener el obejto usuario
+        this.objetoUsuarioL=result;
+        console.log(result);
+        console.log(this.objetoUsuarioL.name);
+        this.nombre=this.objetoUsuarioL.name+' '+this.objetoUsuarioL.apellido ;
+        this.username='@'+this.objetoUsuarioL.userName;
+      });
     });
 
    }
@@ -63,7 +80,9 @@ uidUserLog:any;
     });
    }
    
-       
+       printUser(){
+
+       }
 
     createTweet(){
       //Tweet

@@ -6,7 +6,7 @@ import {FormsModule} from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { DashboardLoginPComponent } from './dashboard-login-p/dashboard-login-p.component';
-import { DashboardRegistroComponent } from './dashboard-registro/dashboard-registro.component';
+//import { DashboardRegistroComponent } from './dashboard-registro/dashboard-registro.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { FeedComponent } from './feed/feed.component';
 import { AppComponent } from './app.component';
@@ -22,7 +22,7 @@ import { Routes,RouterModule} from '@angular/router';
 const appRoutes:Routes=[
   {path:'', component: DashboardLoginPComponent},
   {path:'dashboard-login-p',component:DashboardLoginPComponent},
-  {path:'dashboard-registro',component:DashboardRegistroComponent},
+ // {path:'dashboard-registro',component:DashboardRegistroComponent},
   {path:'usuario',component:UsuarioComponent},
   {path:'feed',component:FeedComponent},
   {path:'perfil',component:PerfilComponent}
@@ -34,7 +34,7 @@ const appRoutes:Routes=[
     FeedComponent,
     PerfilComponent,
     DashboardLoginPComponent,
-    DashboardRegistroComponent,
+   // DashboardRegistroComponent,
     UsuarioComponent
   ],
   imports: [
