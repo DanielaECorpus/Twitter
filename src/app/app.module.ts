@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 //importamos FormsModule para que funcionara el ngModule
 import {FormsModule} from '@angular/forms';
+//para el modal
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { DashboardLoginPComponent } from './dashboard-login-p/dashboard-login-p.component';
 import { DashboardRegistroComponent } from './dashboard-registro/dashboard-registro.component';
@@ -18,11 +20,12 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { Routes,RouterModule} from '@angular/router';
 
 const appRoutes:Routes=[
-  {path:'', component: FeedComponent},
+  {path:'', component: DashboardLoginPComponent},
   {path:'dashboard-login-p',component:DashboardLoginPComponent},
   {path:'dashboard-registro',component:DashboardRegistroComponent},
   {path:'usuario',component:UsuarioComponent},
-  {path:'feed', component: FeedComponent}
+  {path:'feed',component:FeedComponent},
+  {path:'perfil',component:PerfilComponent}
 ];
 
 @NgModule({
@@ -42,7 +45,9 @@ const appRoutes:Routes=[
     AngularFireStorageModule,
     AngularFireDatabaseModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    //para el modal
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

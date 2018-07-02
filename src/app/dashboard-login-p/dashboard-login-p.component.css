@@ -41,10 +41,10 @@
     white-space: nowrap;
 }
 
-.EdgeButton--secondary {
-    background-color: #fff;
+.EdgeButton--secondary[_ngcontent-c1] {
+    background-color: #1da1f2;
     border: 1px solid #1da1f2;
-    color: #1da1f2;
+    color: #fff;
 }
 
 .EdgeButton--small {

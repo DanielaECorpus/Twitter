@@ -1,0 +1,28 @@
+.backgroundColor {
+    background: #1da1f2;
+}
+
+.headerWidth {
+    height: 200px;
+    width: 2000px;
+}
+.alignRight {
+    text-align: right;
+}
+.inputHeight {
+    height: 85px;
+}
+.buttonHeight {
+    height: 40px;
+    width: 10px;
+    margin-left: 1em;
+}
+.colorFondoTextBox {
+    background-color: #e8f5fd;
+}
+.textBox {
+    height: 100px;
+}
+.colorDeFondo{
+    background-color: #e6ecf0;
+}
