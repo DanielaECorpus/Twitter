@@ -1,115 +1,74 @@
-<div class=" row" style="width:100%;height: 560px;">
-  <div class="col-md-6 cssD StaticLoggedOutHomePage-communicationBlock">
-    <p><i class="fas fa-search" style="margin-right: 10px;"></i>Sigue lo que te interesa</p>
-    <p><i class="far fa-user" style="margin-right: 10px;"></i>Entérate de lo que está hablando la gente</p>
-    <p><i class="far fa-comment" style="margin-right: 10px;"></i>Únete a la conversación</p>
-  </div>
-  <div class="col-md-6 ">
-     
-          <div class="form-row align-items-center" style="margin-left: 40px;">
-            <div class="col-sm-3 my-1">
-              <input [(ngModel)]="correo" type="text" class="form-control" style="width: 160px;" id="inlineFormInputName" placeholder="Correo electrónico">
-            </div>
-            <div class="col-sm-3 my-1">
-              <div class="input-group" style="margin-left: 20px;">
-                <input [(ngModel)]="pass" type="password" class="form-control" id="inlineFormInputGroupUsername" placeholder="Contraseña" style="margin-top: 18px;">
-                <small>¿Olvidaste tu contraseña</small>
-              </div>
-            </div>
-            <div class="col-auto my-1" style="margin-left: 20px;">
-              <button  (click)="login()" Type="submit" class="EdgeButton EdgeButton--secondary EdgeButton--small">Iniciar sesión</button>
-            </div>
+<div class=" row" style="width:100%;height: 560px">
+    <div class="col-md-6 cssD StaticLoggedOutHomePage-communicationBlock align-items-center">
+      <p>
+        <i class="fas fa-search" style="margin-right: 10px;"></i>Sigue lo que te interesa</p>
+      <p>
+        <i class="far fa-user" style="margin-right: 10px;"></i>Entérate de lo que está hablando la gente</p>
+      <p>
+        <i class="far fa-comment" style="margin-right: 10px;"></i>Únete a la conversación</p>
+    </div>
+    <div class="col-md-6 ">
+   
+      <div class="form-row align-items-center" style="margin-left: 40px;">
+        <div class="col-sm-3 my-1">
+          <input [(ngModel)]="correo" type="text" class="form-control" style="width: 180px;" id="inlineFormInputName" placeholder="Correo electrónico">
+        </div>
+        <div class="col-sm-3 my-1">
+          <div class="input-group" style="margin-left: 20px;">
+            <input [(ngModel)]="pass" type="password" class="form-control" id="inlineFormInputGroupUsername" placeholder="Contraseña"
+              style="margin-top: 18px;">
+            <small class="smallGris">¿Olvidaste tu contraseña</small>
           </div>
-          <div class="container cssDCon">
-              <img src="/assets/img/icono twitter.jpg" class="cssIconT">
-          <h4 style=" font-family: fantasy;">Mira lo que está pasando en el mundo en este momento</h4>
-          <small style=" font-family: fantasy;">Únete a Twitter hoy mismo</small>
-          <div class="col-auto my-1">
-              <!--<button data-toggle="modal" data-target="#exampleModal" class="EdgeButton EdgeButton--secondary EdgeButton--small" >Registrate</button>-->
-              <button class="btn-lg btn-block EdgeButton EdgeButton--secondary EdgeButton--small" (click)="openLg(content)">Registrate</button>
-            </div>
-          </div>
-  </div>
-</div>
-<!--MODAL REGISTRO-->
-<ng-template #content let-c="close" let-d="dismiss">
+   
+        </div>
+        <div class="col-auto my-1" style="margin-left: 20px;">
+          <button (click)="login()" Type="submit" class="EdgeButton EdgeButton--secondary EdgeButton--small">Iniciar sesión</button>
+        </div>
+      </div>
+      <div class="container cssDCon">
+        <i class="fab fa-twitter cssIconT" style="margin-left: 150px; justify-content:center;"></i>
+        <h5 style="text-align: center">Mira lo que está pasando en el mundo en este momento</h5>
+        <br>
+        <br>
+        <p style="text-align: center">Únete a Twitter hoy mismo</p>
+        <br>
+        <div class="col-auto my-1">
+          <button class="btn-lg btn-block EdgeButton EdgeButton--secondary EdgeButton--small" (click)="openLg(content)">Registrate</button>
+        </div>
+      </div>
+    </div>
+   </div>
+   
+   <ng-template #content let-c="close" let-d="dismiss">
     <div class="modal-header">
       <h4 class="modal-title">Crea tu cuenta</h4>
-      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <button type="button" class="close x" aria-label="Close" (click)="d('Cross click')">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
     <div class="modal-body">
-
-        <div class="container">
-            <div class="form-group">
-                <input  [(ngModel)]="nombre" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Nombre" style="border:0;border-bottom:1px solid #1da1f2">
-              </div>
-              <div class="form-group">
-                  <input  [(ngModel)]="apellido" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Apellido"style="border:0;border-bottom:1px solid #1da1f2">
-                </div>
-            <div class="form-group">
-                  <input [(ngModel)]="correoR" type="email" class="form-control"  aria-describedby="emailHelp" placeholder="Correo" style="border:0;border:0;border-bottom: 1px solid#1da1f2">
-                </div>
-                <div class="form-group">
-                  <input  [(ngModel)]="contra" type="password" class="form-control" placeholder="Contraseña"style="border:0;border-bottom:1px solid #1da1f2">
-                </div>
-                <div class="form-group">
-                 <input  [(ngModel)]="username" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Usuario"style="border:0;border-bottom:1px solid #1da1f2">
-                 </div>
-               
-              </div>
+   
+      <div class="container" style="width: 500px;">
+        <div class="form-group">
+          <input [(ngModel)]="nombre" type="text" class="form-control inputTam" aria-describedby="emailHelp" placeholder="Nombre">
+        </div>
+        <div class="form-group">
+          <input [(ngModel)]="apellido" type="text" class="form-control inputTam" aria-describedby="emailHelp" placeholder="Apellido">
+        </div>
+        <div class="form-group">
+          <input [(ngModel)]="correoR" type="email" class="form-control inputTam" aria-describedby="emailHelp" placeholder="Correo">
+        </div>
+        <div class="form-group">
+          <input [(ngModel)]="contra" type="password" class="form-control inputTam" placeholder="Contraseña">
+        </div>
+        <div class="form-group">
+          <input [(ngModel)]="username" type="text" class="form-control inputTam" aria-describedby="emailHelp" placeholder="Usuario">
+        </div>
+      </div>
     </div>
-    <div class="modal-footer">
-       <button (click)="register()" type="button" class="btn btn-primary">Register</button>
+    <div class="modal-footer" style="align-self: center">
+      <button (click)="register()" type="button" class="EdgeButton--3">Register</button>
     </div>
-  </ng-template>
-         <!-- Modal -->
-       <!--  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  ...
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button  (click)="register()" type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
-            </div>
-          </div>-->
-
-         
-<!-- Footer -->
-<footer class="page-footer font-small blue">
-
-    <!-- Copyright -->
-    <div class="text-center py-3">
-      <a   class="cssA" href="https://mdbootstrap.com/bootstrap-tutorial/">Acerca de</a>
-      <a   class="cssA" href="https://mdbootstrap.com/bootstrap-tutorial/">Centro de apoyo</a>
-      <a   class="cssA" href="https://mdbootstrap.com/bootstrap-tutorial/">Blog</a>
-      <a   class="cssA" href="https://mdbootstrap.com/bootstrap-tutorial/">Estado</a>
-      <a   class="cssA" href="https://mdbootstrap.com/bootstrap-tutorial/">Trabajos</a>
-      <a   class="cssA" href="https://mdbootstrap.com/bootstrap-tutorial/">Términos</a>
-      <a   class="cssA" href="https://mdbootstrap.com/bootstrap-tutorial/">Política de privacidad</a>
-      <a   class="cssA" href="https://mdbootstrap.com/bootstrap-tutorial/">Cookies</a>
-      <a   class="cssA" href="https://mdbootstrap.com/bootstrap-tutorial/">Información de anuncios</a>
-      <a   class="cssA" href="https://mdbootstrap.com/bootstrap-tutorial/">Marca</a>
-      <a   class="cssA" href="https://mdbootstrap.com/bootstrap-tutorial/">Publicar anuncios</a>
-      <a   class="cssA" href="https://mdbootstrap.com/bootstrap-tutorial/">Marketing</a>
-      <a class="cssA"  href="https://mdbootstrap.com/bootstrap-tutorial/">Empresas</a>
-      <a   class="cssA" href="https://mdbootstrap.com/bootstrap-tutorial/">Desarrolladores</a>
-      <a class="cssA"  href="https://mdbootstrap.com/bootstrap-tutorial/">Guía</a>
-      <a class="cssA"  href="https://mdbootstrap.com/bootstrap-tutorial/">Configuración</a>
-      <a class="cssA"  href="https://mdbootstrap.com/bootstrap-tutorial/">Copyright © 2018 Twitter,Inc.</a> 
-    </div>
-    <!-- Copyright -->
-  
-  </footer>
-  <!-- Footer -->
+   
+    
+   </ng-template>
