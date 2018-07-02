@@ -53,21 +53,21 @@ export class FeedComponent implements OnInit {
   ) {
 
 
-    const stream1 = this.authenticationService.getStatus();
-    stream1.subscribe((result) => {
-      this.userlog = result;
-      console.log(this.userlog);
-      console.log(this.userlog.uid);
-      this.uidUserLog = this.userlog.uid;
+    const stream1=this.authenticationService.getStatus();
+    stream1.subscribe((result)=>{
+      this.userlog=result;
+      //console.log(this.userlog);
+      //console.log(this.userlog.uid);
+      this.uidUserLog=this.userlog.uid;
 
       const stream2 = this.userFirebaseService.getUserByUId(this.uidUserLog);
       stream2.valueChanges().subscribe((result) => {
         //para obtener el obejto usuario
-        this.objetoUsuarioL = result;
-        console.log(result);
-        console.log(this.objetoUsuarioL.name);
-        this.nombre = this.objetoUsuarioL.name + ' ' + this.objetoUsuarioL.apellido;
-        this.username = '@' + this.objetoUsuarioL.userName;
+        this.objetoUsuarioL=result;
+        //console.log(result);
+       // console.log(this.objetoUsuarioL.name);
+        this.nombre=this.objetoUsuarioL.name+' '+this.objetoUsuarioL.apellido ;
+        this.username='@'+this.objetoUsuarioL.userName;
       });
     });
 
