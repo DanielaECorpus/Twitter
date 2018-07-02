@@ -7,25 +7,25 @@ import { AngularFireDatabase } from 'angularfire2/database';
 export class UsersService {
 
   constructor(
-    public angularFireDatabase:AngularFireDatabase
+    public angularFireDatabase: AngularFireDatabase
   ) { }
 
 
   //metodo agregar
-  createUser(user){
+  createUser(user) {
     //a que nodo, el id que generaremos para ese usuario y se lo asignamos a la variable user
-return this.angularFireDatabase.object('usersT/' + user.user_id).set(user);
-}
+    return this.angularFireDatabase.object('usersT/' + user.user_id).set(user);
+  }
 
-//metodo buscar por id(me retorna los datos del usuario)
-getUserByUId(user_id){
-  //a que nodo, el id que generaremos para ese usuario 
-return this.angularFireDatabase.object('usersT/' +user_id);
-}
+  //metodo buscar por id(me retorna los datos del usuario)
+  getUserByUId(user_id) {
+    //a que nodo, el id que generaremos para ese usuario 
+    return this.angularFireDatabase.object('usersT/' + user_id);
+  }
 
-//actualizar un usuario
-editUser(user){
-  return this.angularFireDatabase.object('usersT/' + user.user_id).set(user);
-}
+  //actualizar un usuario
+  editUser(user) {
+    return this.angularFireDatabase.object('usersT/' + user.user_id).set(user);
+  }
 
 }

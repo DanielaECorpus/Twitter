@@ -1,3 +1,4 @@
+<app-menu></app-menu>
 <div class="container-fluid row bgColor">
 
   <div class="col-lg-3 col-md-12 col-sm-12">
@@ -7,8 +8,8 @@
       </div>
       <img class="card-img-top profile-img" src="../../assets/img/user.png" alt="Avatar">
       <div class="card-body profile-body">
-        <h5 class="card-title profile-title">Nombre Usuario</h5>
-        <h6 class="card-subtitle mb-2 text-muted profile-subtitle">@NombreUsuario</h6>
+        <h5 class="card-title profile-title">{{nombre}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted profile-subtitle">{{username}}</h6>
         <div class="row">
           <div class="col-4">
             <small class="text-muted">Tweets</small>
@@ -61,23 +62,23 @@
           <img class="card-img-top user-twit-img" src="../../assets/img/user.png" alt="Avatar">
         </div>
         <div class="col-lg-11 col-md-11 col-sm-11">
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="280" placeholder="¿Qué está Pasando?"></textarea>
-          <button type="button" class="btn btn-dark" (click)="ShowAlertTweet()">Twittear</button>
+          <textarea class="form-control" [(ngModel)]="textoT" rows="3" maxlength="280" placeholder="¿Qué está Pasando?"></textarea>
+          <button type="button" class="btn btn-dark" (click)="createTweet()">Twittear</button>
         </div>
       </div>
     </div>
 
-    <div class="card card-all-twits">
+    <div class="card card-all-twits" *ngFor="let item of tweets[0]">
       <div class="card-body body-all-twits">
         <img class="img-user-twit" src="../../assets/img/user.png" />
         <div class="user-twit-title">
-          <h6>NombreUsuario
-            <small>@NombreUsuario - 1 Hora</small>
+          <h6>{{item.user_tweet}}
+            <small>{{item.username_tweet}} - {{item.tweet_hour}} Horas</small>
           </h6>
-          <p class="card-text" style="width: 90%">Tweet de Ejemplo, este es un ejemplo aqui se mostrarán todos los tweets de cada uno de los usaurios de la aplicación.</p>
+          <p class="card-text" style="width: 100%">{{item.description}}</p>
           <div class="row">
             <div class="col-4">
-              <i class="fas fa-heart"></i> 1
+              <i class="fas fa-heart" (click)="LoveItTweet()"></i> {{item.tweet_count}}
             </div>
           </div>
         </div>
@@ -155,8 +156,9 @@
 <span style="display:none">{{fecha | date : 'shortTime' }}</span>
 <span style="display:none">{{fecha | date : 'shortDate' }}</span>
 <span style="display:none">{{fecha | date : 'd/M/yy' }}</span> -->
-<input [(ngModel)]="nombre" type="text" name="" id="">
+
+<!-- <input [(ngModel)]="nombre" type="text" name="" id="">
 <input [(ngModel)]="username" type="text">
 <button (click)="printTweets()">Tweets</button>
 <textarea [(ngModel)]="textoT" maxlength="280" cols="30" rows="10"></textarea>
-<button (click)="createTweet()" >Crear tweet</button>
+<button (click)="createTweet()" >Crear tweet</button> -->

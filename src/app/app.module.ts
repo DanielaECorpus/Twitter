@@ -18,6 +18,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
 import { PerfilComponent } from './perfil/perfil.component';
 import { Routes,RouterModule} from '@angular/router';
+import { MenuComponent } from './menu/menu.component';
 
 const appRoutes:Routes=[
   {path:'', component: DashboardLoginPComponent},
@@ -35,7 +36,8 @@ const appRoutes:Routes=[
     PerfilComponent,
     DashboardLoginPComponent,
    // DashboardRegistroComponent,
-    UsuarioComponent
+    UsuarioComponent,
+   MenuComponent
   ],
   imports: [
     BrowserModule,
