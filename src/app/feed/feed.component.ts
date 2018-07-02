@@ -49,16 +49,16 @@ username:any;
     const stream1=this.authenticationService.getStatus();
     stream1.subscribe((result)=>{
       this.userlog=result;
-      console.log(this.userlog);
-      console.log(this.userlog.uid);
+      //console.log(this.userlog);
+      //console.log(this.userlog.uid);
       this.uidUserLog=this.userlog.uid;
 
       const stream2=this.userFirebaseService.getUserByUId(this.uidUserLog);
       stream2.valueChanges().subscribe((result)=>{
         //para obtener el obejto usuario
         this.objetoUsuarioL=result;
-        console.log(result);
-        console.log(this.objetoUsuarioL.name);
+        //console.log(result);
+       // console.log(this.objetoUsuarioL.name);
         this.nombre=this.objetoUsuarioL.name+' '+this.objetoUsuarioL.apellido ;
         this.username='@'+this.objetoUsuarioL.userName;
       });
@@ -69,24 +69,20 @@ username:any;
 //Metodo para mostrar todos los tweets
    printTweets(){
      this.tweetService.getTweets();
-     console.log();
+     //console.log();
 
      const stream= this.tweetService.getTweets();
     //mediante esto nos sucribimos a la lista y asi obtener la( y no el objeto)
     stream.valueChanges().subscribe((result) =>{
       //asignamos el result a la variable users para desplegar la en el componente
       this.tweets=result;
-      console.log(result);
+      //console.log(result);
     });
    }
    
-       printUser(){
-
-       }
-
     createTweet(){
       //Tweet
-      debugger;
+     // debugger;
       const tweet={
         description:this.textoT,
         timestamp:Date.now(),
@@ -96,7 +92,7 @@ username:any;
 
      const promise=this.tweetService.createTweet(tweet);
      promise.then((data)=>{
-      console.log(data);
+     // console.log(data);
       alert('tweet creado');
     }).catch((error)=>{
       console.log('error', error);

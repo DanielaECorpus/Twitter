@@ -18,7 +18,7 @@ export class DashboardLoginPComponent implements OnInit {
   apellido:string;
   correoR:string;
   contra:string;
-  avatar:string;
+  //avatar:string;
   username:string;
 
   //variables login
@@ -85,7 +85,7 @@ register(){
         apellido:this.apellido,
         correo:this.correoR,
         pass:this.contra,
-        avatar:this.avatar,
+        //avatar:this.avatar,
         userName:this.username
         //userName:'@'+this.username
       } ;
