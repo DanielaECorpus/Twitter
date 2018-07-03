@@ -10,9 +10,9 @@
     -moz-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
-}
-
-.StaticLoggedOutHomePage-cell {
+ }
+ 
+ .StaticLoggedOutHomePage-cell {
     -moz-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -26,9 +26,9 @@
     -ms-flex-pack: center;
     justify-content: center;
     position: relative;
-}
-
-.EdgeButton, .EdgeButton:visited {
+ }
+ 
+ .EdgeButton, .EdgeButton:visited {
     border-radius: 100px;
     box-shadow: none;
     cursor: pointer;
@@ -39,53 +39,83 @@
     position: relative;
     text-align: center;
     white-space: nowrap;
-}
-
-.EdgeButton--secondary[_ngcontent-c1] {
+ }
+ 
+ .EdgeButton--secondary[_ngcontent-c1] {
     background-color: #1da1f2;
     border: 1px solid #1da1f2;
+    border-radius: 50px;
     color: #fff;
-}
-
-.EdgeButton--small {
+ }
+ 
+ .EdgeButton--3[_ngcontent-c1] {
+    background-color: #1da1f2;
+    border: 1px solid #1da1f2;
+    border-radius: 50px;
+    color: #fff;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+ }
+ 
+ .EdgeButton--small {
     font-size: 12px;
     line-height: 16px;
     padding: 4px 12px;
-}
-
-.StaticLoggedOutHomePage-communicationBlock {
+ }
+ 
+ .StaticLoggedOutHomePage-communicationBlock {
     background: #1da1f2;
     overflow: hidden;
     position: relative;
-}
-
-.cssA{
+ }
+ 
+ .cssA{
     margin-right: 5px;
-}
-.py-3 {
-    /* padding-bottom: 1rem!important; */
-}
-
-.cssD{
-    padding: 155px;
+ }
+ 
+ .cssD{
+    height: 700px;
+    padding: 200px;
     color: white;
-    /* text-align: center; */
-    font-size: 1em;
-    font-family: fantasy;
-}
-
-h4 {
+    font-size: 15px;
+    text-align: center;  
+ }
+ 
+ .h4 {
     font-size: 2rem;
-}
-
-.cssDCon{
-    width: 60%;
+ }
+ 
+ .cssDCon{
+    width: 55%;
     margin-top: 70px;
-}
-
-.cssIconT{
-    color: blue;
-    width: 70px;
-    height: 50px;
+ }
+ 
+ .cssIconT{
+    color: #1da1f2;
+    justify-content: center;
+    align-self: center;
+    font-size: 50px;
     margin-bottom: 20px;
-}
+ }
+ .smallGris{ color: #66757f;}
+ 
+ .inputTam{
+    height: 32px;
+ }
+ 
+ .modal-header{
+    text-justify: inherit;
+    text-align: center;
+    align-content: center;
+    background: #1da1f2;
+    color: white;
+ }
+ 
+ .x{ color: white }
+ 
+ .boton1 {
+    border: 0rem;
+    border-radius: 50px;
+    background-color: #55ACEE;
+ }

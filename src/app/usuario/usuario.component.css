@@ -3,7 +3,7 @@
 }
 
 .headerWidth {
-    height: 200px;
+    height: 150px;
     width: 2000px;
 }
 .alignRight {
@@ -25,4 +25,30 @@
 }
 .colorDeFondo{
     background-color: #e6ecf0;
+}
+
+.colorDeFondo2 {
+    background-color: white;
+}
+.margin {
+    margin: 20px;
+}
+.fontSize {
+    font-size: .8em;
+}
+.textBlue {
+    color: #5077bb;
+    font-weight: bold
+}
+.fontSize2 {
+    font-size: 1.2em;
+}
+.margin2 {
+    margin: .6em 0 .6em 0;
+}
+.alignCenter {
+    text-align: center;
+}
+.alignLeft {
+    text-align: left;
 }

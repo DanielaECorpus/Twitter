@@ -1,8 +1,10 @@
+<app-menu></app-menu>
+
 <body class="bg-light">
   <div class="container-fluid">
     <div class="heatherImg">
-      <img src="..." alt="header" id="headerImg">
-      <input type="file" name="pic" accept="image/*">
+      <!-- <img src="..." alt="header" id="headerImg"> -->
+      <!-- <input type="file" name="pic" accept="image/*"> -->
     </div>
   </div>
   <br>
@@ -10,79 +12,66 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 f2">
-        <div class="row justify-content-center">          
+        <div class="row justify-content-center">
           <div class="container UP">
-              <img class="rounded-circle bor" src="http://via.placeholder.com/200x200" alt="imgPerfil" width="200" height="200">
-              <div class="card-body">
+            <img class="rounded-circle bor" src="http://via.placeholder.com/200x200" alt="imgPerfil" width="200" height="200">
+            <div class="card-body">
               <a href="#" class="btn btn-primary boton1" type="input">Cambiar Imagen</a>
-              </div>
             </div>
           </div>
+        </div>
 
       </div>
       <div class="col-md-6 order-md-1 ">
         <h2 class="mb-3">Perfil de Usuario</h2>
-      <!--  <form class="needs-validation" novalidate>-->
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <input [(ngModel)]="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre" value="" required>
-              <div class="invalid-feedback">
-                Valid first name is required.
-              </div>
-            </div>
-            <div class="col-md-6 mb-3">
-              <input [(ngModel)]="apellido" type="text" class="form-control" id="bio" placeholder="Apellido" value="" required>
-              <div class="invalid-feedback">
-                Valid first name is required.
-              </div>
-            </div>
-          </div>
-          <div class="mb-3">
-            <fieldset disabled>
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">@</span>
-                </div>
-                <input [(ngModel)]="username" type="text" class="form-control" id="username disabled" placeholder="Username" required>
-                <div class="invalid-feedback" style="width: 100%;">
-                  Your username is required.
-                </div>
-              </div>
-            </fieldset>
-          </div>
-          <div class="mb-3">
-            <fieldset disabled>
-              <input [(ngModel)]="email" type="email" class="form-control" id="email" placeholder="you@example.com">
-              <div class="invalid-feedback">
-                Please enter a valid email address for shipping updates.
-              </div>
-            </fieldset>
-          </div>
-          <div class="mb-3">
-            <input [(ngModel)]="contra" type="text" class="form-control" id="firstName" placeholder="Contraseña" value="" required>
+        <!--  <form class="needs-validation" novalidate>-->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <input [(ngModel)]="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre" value="" required>
             <div class="invalid-feedback">
               Valid first name is required.
             </div>
           </div>
-          <hr class="mb-4">
-          <button (click)="updateUser()" class="btn btn-primary btn-lg btn-block boton1" type="submit">Guardar</button>
-       <!-- </form>-->
+          <div class="col-md-6 mb-3">
+            <input [(ngModel)]="apellido" type="text" class="form-control" id="bio" placeholder="Apellido" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <fieldset disabled>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">@</span>
+              </div>
+              <input [(ngModel)]="username" type="text" class="form-control" id="username disabled" placeholder="Username" required>
+              <div class="invalid-feedback" style="width: 100%;">
+                Your username is required.
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="mb-3">
+          <fieldset disabled>
+            <input [(ngModel)]="email" type="email" class="form-control" id="email" placeholder="you@example.com">
+            <div class="invalid-feedback">
+              Please enter a valid email address for shipping updates.
+            </div>
+          </fieldset>
+        </div>
+        <div class="mb-3">
+          <input [(ngModel)]="contra" type="text" class="form-control" id="firstName" placeholder="Contraseña" value="" required>
+          <div class="invalid-feedback">
+            Valid first name is required.
+          </div>
+        </div>
+        <hr class="mb-4">
+        <button (click)="updateUser()" class="btn btn-primary btn-lg btn-block boton1" type="submit">Guardar</button>
+        <!-- </form>-->
       </div>
     </div>
-    
-    <footer class="my-5 pt-5 text-muted text-center text-small">
-      <p class="mb-1">&copy; Twitter / Digital HUB / Equipo 3</p>
-      <ul class="list-inline">
-        <li class="list-inline-item">
-          <a href="#" class="fA">Privacy</a>
-        </li>
-        <li class="list-inline-item">
-          <a href="#" class="fA">Terms</a>
-        </li>
-        <li class="list-inline-item">
-          <a href="#" class="fA">Support</a>
-        </li>
-      </ul>
-    </footer>
   </div>
 </body>
+
+<app-footer></app-footer>
